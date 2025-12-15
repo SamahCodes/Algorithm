@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maximum Subarray Sum Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🔍 Maximum Subarray Sum</h1>
+      <p class="subtitle">Kadane's Algorithm & Naive Approach</p>
+    </header>
+
+
+    <div class="card preset-arrays">
+      <div class="preset-header" onclick="togglePresets()">
+        <h2>Try Preset Arrays</h2>
+        <button class="toggle-btn" id="presetToggle">
+          <span class="toggle-icon">▼</span>
+        </button>
+      </div>
+      <div class="preset-content" id="presetContent" style="display: none;">
+        <p class="preset-description">Select a preset array to quickly test different scenarios:</p>
+        <div class="preset-grid" id="presetGrid">
+        </div>
+      </div>
+    </div>
+
+    <div class="card array-builder">
+      <h2>📝 Build Your Array</h2>
+      <div class="array-inputs" id="arrayInputs">
+
+      </div>
+      <div class="array-controls">
+        <button class="btn btn-primary" onclick="addInput()">➕ Add Number</button>
+        <button class="btn btn-secondary" onclick="removeInput()">➖ Remove Last</button>
+        <button class="btn btn-secondary" onclick="clearAll()"> Clear All</button>
+      </div>
+    </div>
+
+    <div class="card algorithm-selection">
+      <h2>⚙️ Algorithm & Mode</h2>
+      <div class="selection-group">
+        <div class="select-wrapper">
+          <label for="algorithm">Algorithm:</label>
+          <select id="algorithm" class="select-input">
+            <option value="kadane">Kadane (Optimized, O(n))</option>
+            <option value="naive">Naive (O(n²))</option>
+          </select>
+        </div>
+        <div class="select-wrapper">
+          <label for="mode">Execution Mode:</label>
+          <select id="mode" class="select-input">
+            <option value="step">Step-by-Step Visualization</option>
+            <option value="final">Final Result</option>
+          </select>
+        </div>
+      </div>
+      <div class="control-buttons">
+        <button class="btn btn-success" onclick="start()">▶️ Start</button>
+        <button class="btn btn-info" id="nextBtn" onclick="nextStep()" disabled>⏭️ Next Step</button>
+        <button class="btn btn-warning" onclick="resetAll()">🔄 Reset</button>
+      </div>
+    </div>
+
+    <div class="card visualization">
+      <h2> Array Visualization</h2>
+      <div class="array-view" id="arrayView">
+        <p class="placeholder">Enter numbers and click Start to visualize</p>
+      </div>
+      <div class="subarray-info" id="subarrayInfo"></div>
+    </div>
+
+    <div class="card statistics">
+      <h2>📊 Statistics</h2>
+      <div class="stats-grid" id="info">
+        <div class="stat-item">
+          <span class="stat-label">Current Sum:</span>
+          <span class="stat-value" id="currentSum">-</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Best Sum:</span>
+          <span class="stat-value" id="bestSum">-</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Operations:</span>
+          <span class="stat-value" id="operations">-</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Time Complexity:</span>
+          <span class="stat-value" id="timeComplexity">-</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card explanation">
+      <h2>💡 Explanation</h2>
+      <div class="explanation-content" id="explanation">
+        <p class="placeholder">Select algorithm and mode, then click Start to see explanations</p>
+      </div>
+    </div>
+
+    <div class="card result" id="resultCard" style="display: none;">
+      <h2>🎯 Final Result</h2>
+      <div class="result-content" id="resultContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
