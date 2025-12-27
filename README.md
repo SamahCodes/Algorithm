@@ -2,7 +2,7 @@
 ### Naive vs Optimized (Kadane’s Algorithm)
 
 🎥 **Project Video:**  
-[Watch the explanation video](https://drive.google.com/file/d/1f1tnFPwwjtwsfjTfFcWo1CL4VQAxU50v/view?usp=sharing)
+[Watch the explanation video](https://drive.google.com/file/d/1nGlujUr8ld1iseSh52TtLEBWi_h7uzdM/view?usp=sharing)
 
 🌐 **Live Version:**  
 [Open Live Version](https://samahcodes.github.io/Algorithm/)
