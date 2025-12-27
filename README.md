@@ -95,13 +95,14 @@ The theoretical analysis explains the time and space complexity of both algorith
 The empirical analysis evaluates the real execution time of both algorithms on inputs of varying sizes.
 
 📄 **Empirical Analysis PDF:**  
-[Open Empirical Analysis](empirical.pdf)
+[Open Empirical Analysis](empirical%20analysis.pdf)
 
 ### Observations:
 - Kadane’s algorithm shows linear growth in execution time.
 - The naive solution becomes inefficient for large inputs.
 - Empirical results confirm the theoretical analysis.
-
+   **graph Screenshot:**  
+![the graph](the%20graph.jpg)
 ---
 
 ## 🔍 Comparison Summary
